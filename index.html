@@ -1,29 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title data-key="appTitle">Hava Durumu Uygulaması</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futbol İddaa Sitesi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="controls">
-        <select id="languageSelect">
-            <option value="tr">Türkçe</option>
-            <option value="nl">Nederlands</option>
-            <option value="en">English</option>
-        </select>
-        <input type="text" id="cityInput" placeholder="Enter a city name...">
-        <button onclick="getWeatherByCity()" data-key="searchButton">Search</button>
-    </div>
-    <div class="weather-container">
-        <h1 data-key="currentLocationWeather">Mevcut Konumun Hava Durumu</h1>
-        <div id="currentWeather"></div>
-    </div>
-    <div class="weather-container">
-        <h1 data-key="searchResults">Arama Sonuçları</h1>
-        <div id="searchResults"></div>
-    </div>
-
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <header>
+    <h1>Futbol İddaa</h1>
+  </header>
+  <main>
+    <section class="ligler">
+      <h2>Ligler</h2>
+      <ul>
+        <li><a href="#">Süper Lig</a></li>
+        <li><a href="#">Premier Lig</a></li>
+        <li><a href="#">La Liga</a></li>
+        <li><a href="#">Serie A</a></li>
+        <li><a href="#">Bundesliga</a></li>
+      </ul>
+    </section>
+    <section class="kuponlar">
+      <h2>Kuponlar</h2>
+      <ul>
+        <li>
+          <div class="kupon-baslik">
+            <h3>Süper Lig - 14. Hafta</h3>
+            <p>2024-11-20</p>
+          </div>
+          <div class="kupon-mac">
+            <span class="takim">Galatasaray</span>
+            <input type="radio" name="mac1" value="1">
+            <span class="skor">1</span>
+            <input type="radio" name="mac1" value="x">
+            <span class="skor">X</span>
+            <input type="radio" name="mac1" value="2">
+            <span class="skor">2</span>
+            <span class="takim">Fenerbahçe</span>
+          </div>
+          <div class="kupon-mac">
+            <span class="takim">Beşiktaş</span>
+            <input type="radio" name="mac2" value="1">
+            <span class="skor">1</span>
+            <input type="radio" name="mac2" value="x">
+            <span class="skor">X</span>
+            <input type="radio" name="mac2" value="2">
+            <span class="skor">2</span>
+            <span class="takim">Trabzonspor</span>
+          </div>
+        </li>
+      </ul>
+      <button class="buton">Kupon Oyna</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Futbol İddaa</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
